@@ -1,15 +1,29 @@
-type PDF = 'PDF'
-type HTML = 'HTML'
-type JSON = 'JSON' // raw ast
+import { parseToAST } from './parser'
 
-export type ExportFormat = PDF | HTML | JSON
+export enum ExportFormat {
+  PDF = 'PDF',
+  HTML = 'HTML',
+  JSON = 'JSON',
+}
 
 export interface IRendererOptions {
   format?: ExportFormat
 }
 
-export const render = (input: string, options: IRendererOptions): String => {
-  return input
+const defaultOptions = {
+  format: ExportFormat.JSON,
+}
+
+export const render = (
+  input: string,
+  options: IRendererOptions = defaultOptions
+): string => {
+  switch (options.format) {
+    case ExportFormat.JSON:
+      return parseToAST(input)
+    default:
+      return input
+  }
 }
 
 /* notes
