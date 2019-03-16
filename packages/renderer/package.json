@@ -1,0 +1,27 @@
+{
+  "name": "@fountain/renderer",
+  "version": "1.0.0",
+  "description": "Renders .fountain files to AST + other formats\"",
+  "main": "src/index.ts",
+  "repository": "https://github.com/michaelhelvey/fountain",
+  "author": "Michael Helvey",
+  "license": "MIT",
+  "typings": "build/index",
+  "scripts": {
+    "build": "tsc -p .",
+    "lint": "tslint src/**/*",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/chai": "^4.1.7",
+    "@types/jest": "^24.0.11",
+    "chai": "^4.2.0",
+    "jest": "^24.5.0",
+    "ts-jest": "^24.0.0",
+    "tslint": "^5.14.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.3.3333"
+  }
+}

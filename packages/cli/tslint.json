@@ -1,0 +1,16 @@
+{
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": ["node_modules/**/*.ts"]
+  },
+  "rules": {
+    "object-literal-sort-keys": false,
+    "jsx-no-lambda": false,
+    "ordered-imports": false,
+    "jsx-boolean-value": false,
+    "no-console": false
+  },
+  "jsRules": {
+    "object-literal-sort-keys": false //Disable for javascript
+  }
+}

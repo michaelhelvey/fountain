@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": "/*",
+    "outDir": "build/",
+    "module": "commonjs",
+    "typeRoots": ["./types"],
+    "types": ["node"],
+    "esModuleInterop": true,
+    "target": "es6",
+    "lib": ["es6", "esnext", "dom"],
+    "sourceMap": true,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "rootDir": "./src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "importHelpers": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true
+  },
+  "exclude": ["node_modules", "build"]
+}
