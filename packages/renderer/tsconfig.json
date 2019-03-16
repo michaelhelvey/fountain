@@ -9,7 +9,7 @@
     "lib": ["es6", "esnext", "dom"],
     "sourceMap": true,
     "moduleResolution": "node",
-    "rootDir": "./",
+    "rootDir": "./src",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -19,5 +19,5 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true
   },
-  "exclude": ["node_modules", "!node_modules/@types"]
+  "exclude": ["node_modules", "!node_modules/@types", "build", "tests"]
 }

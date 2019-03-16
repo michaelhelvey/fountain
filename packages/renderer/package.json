@@ -2,7 +2,7 @@
   "name": "@fountain/renderer",
   "version": "1.0.0",
   "description": "Renders .fountain files to AST + other formats\"",
-  "main": "src/index.ts",
+  "main": "build/index.js",
   "repository": "https://github.com/michaelhelvey/fountain",
   "author": "Michael Helvey",
   "license": "MIT",

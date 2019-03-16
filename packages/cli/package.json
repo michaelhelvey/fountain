@@ -11,6 +11,9 @@
     "start": "ts-node src/index.ts",
     "lint": "tslint src/**/*"
   },
+  "bin": {
+    "fountain": "./build/index.js"
+  },
   "dependencies": {
     "@fountain/renderer": "*",
     "colors": "^1.3.3",

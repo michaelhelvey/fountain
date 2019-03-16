@@ -11,7 +11,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "tsc -p .",
+    "build": "lerna run build",
     "cli": "ts-node --project packages/cli/tsconfig.json packages/cli/src/index.ts"
   },
   "devDependencies": {
