@@ -1,19 +1,28 @@
-import { Line } from './line'
-import { FNTElement } from './element'
+import { FNTElementType } from './element'
+
+export interface FNTJSONElement {
+  'element-type': string
+  lines: string[]
+}
 
 /**
  * Takes a string of text and creates a JSON object
  * representing this text, suitable to be passed to other renderers.
  * @param input String of fountain-compliant input text
  */
-export const parseToAST = (input: string): string => {
+export const parseToJSON = (input: string): FNTJSONElement[] => {
+  const output: FNTJSONElement[] = []
+
   // create array of lines
-  const lines = input.split(/\n/).map(t => new Line(t))
+  const lines = input.split(/\n/)
 
   // iterate over the lines and break them up by element
-  const elements = lines.map(line => {
-    return new FNTElement([line])
+  lines.forEach(line => {
+    output.push({
+      'element-type': FNTElementType.SCENE_HEADING,
+      lines: [line],
+    })
   })
 
-  return JSON.stringify({ elements })
+  return output
 }

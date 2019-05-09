@@ -1,4 +1,4 @@
-import { parseToAST } from './parser'
+import { parseToJSON } from './parser'
 
 export enum ExportFormat {
   PDF = 'PDF',
@@ -20,7 +20,7 @@ export const render = (
 ): string => {
   switch (options.format) {
     case ExportFormat.JSON:
-      return parseToAST(input)
+      return parseToJSON(input)
     default:
       return input
   }
